@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */; };
-		9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E225B799BE006C416A /* ContentView.swift */; };
-		9EEFD1E525B799D4006C416A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
-		9EEFD1E825B799D4006C416A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */; };
+		9EC87AA825B8F35400B1786D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EC87AA325B8F35400B1786D /* Assets.xcassets */; };
+		9EC87AA925B8F35400B1786D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC87AA525B8F35400B1786D /* ContentView.swift */; };
+		9EC87AAB25B8F35400B1786D /* AutoRefersherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC87AA725B8F35400B1786D /* AutoRefersherApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EC87AA325B8F35400B1786D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EC87AA525B8F35400B1786D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9EC87AA725B8F35400B1786D /* AutoRefersherApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoRefersherApp.swift; sourceTree = "<group>"; };
 		9EEFD1DD25B799BE006C416A /* Auto Refersher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refersher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefersherApp.swift; sourceTree = "<group>"; };
-		9EEFD1E225B799BE006C416A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9EEFD1E425B799D4006C416A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9EEFD1E925B799D4006C416A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoRefersher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +33,9 @@
 		9EEFD1D425B799BD006C416A = {
 			isa = PBXGroup;
 			children = (
-				9EEFD1DF25B799BE006C416A /* AutoRefersher */,
+				9EC87AA725B8F35400B1786D /* AutoRefersherApp.swift */,
+				9EC87AA525B8F35400B1786D /* ContentView.swift */,
+				9EC87AA325B8F35400B1786D /* Assets.xcassets */,
 				9EEFD1DE25B799BE006C416A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,27 +46,6 @@
 				9EEFD1DD25B799BE006C416A /* Auto Refersher.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9EEFD1DF25B799BE006C416A /* AutoRefersher */ = {
-			isa = PBXGroup;
-			children = (
-				9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */,
-				9EEFD1E225B799BE006C416A /* ContentView.swift */,
-				9EEFD1E425B799D4006C416A /* Assets.xcassets */,
-				9EEFD1E925B799D4006C416A /* Info.plist */,
-				9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */,
-				9EEFD1E625B799D4006C416A /* Preview Content */,
-			);
-			path = AutoRefersher;
-			sourceTree = "<group>";
-		};
-		9EEFD1E625B799D4006C416A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +79,7 @@
 				TargetAttributes = {
 					9EEFD1DC25B799BE006C416A = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -128,8 +106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EEFD1E825B799D4006C416A /* Preview Assets.xcassets in Resources */,
-				9EEFD1E525B799D4006C416A /* Assets.xcassets in Resources */,
+				9EC87AA825B8F35400B1786D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +117,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */,
-				9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */,
+				9EC87AA925B8F35400B1786D /* ContentView.swift in Sources */,
+				9EC87AAB25B8F35400B1786D /* AutoRefersherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +245,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AutoRefersher/AutoRefersher.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"AutoRefersher/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AutoRefersher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -281,6 +256,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Peter.AutoRefersher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -290,12 +266,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AutoRefersher/AutoRefersher.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"AutoRefersher/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = AutoRefersher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
