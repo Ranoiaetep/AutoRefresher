@@ -16,8 +16,8 @@ struct ContentView: View {
 	@State private var addressList: [String] = [""]
 	@State private var originalField: [String] = [""]
 	@State private var addressCount: Int = 1
-	@State private var visitTimes: Double = 50
-	@State private var remainingTimes: Double = 50
+	@State private var visitTimes: Double = 100
+	@State private var remainingTimes: Double = 100
 	@State private var optionMenu: Bool = false
 	@State private var interval: Double = 1.8
 	@State private var started: Bool = false
@@ -42,7 +42,7 @@ struct ContentView: View {
 				VStack {
 					ForEach((0..<addressCount), id: \.self) { index in
 						VStack {
-							TextField("https://www.apple.com", text: $addressList[index], onCommit: {
+							TextField("https://github.com/Ranoiaetep/AutoRefresher", text: $addressList[index], onCommit: {
 								if !addressList[index].isEmpty &&
 									addressList[index] != originalField[index] &&
 									!(addressList.last?.isEmpty ?? true) {
