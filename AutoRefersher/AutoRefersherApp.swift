@@ -2,7 +2,7 @@
 //  AutoRefersherApp.swift
 //  AutoRefersher
 //
-//  Created by Bill Stout on 1/19/21.
+//  Created by Ranoiaetep on 1/19/21.
 //
 
 import SwiftUI
