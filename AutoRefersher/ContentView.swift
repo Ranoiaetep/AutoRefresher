@@ -13,9 +13,7 @@ struct ContentView: View {
 	let doubleFormatter = NumberFormatter()
 	let dateFormatter = DateComponentsFormatter()
 
-	@State private var addressList: [String] = [""]
-	@State private var originalField: [String] = [""]
-	@State private var addressCount: Int = 1
+	@State private var addressList: [String] = [String()]
 	@State private var visitTimes: Double = 100
 	@State private var remainingTimes: Double = 100
 	@State private var optionMenu: Bool = false
@@ -40,21 +38,7 @@ struct ContentView: View {
 		VStack{
 			HStack {
 				VStack {
-					ForEach((0..<addressCount), id: \.self) { index in
-						VStack {
-							TextField("https://github.com/Ranoiaetep/AutoRefresher", text: $addressList[index], onCommit: {
-								if !addressList[index].isEmpty &&
-									addressList[index] != originalField[index] &&
-									!(addressList.last?.isEmpty ?? true) {
-										originalField[index] = addressList[index]
-										addressList.append("")
-										originalField.append("")
-										addressCount += 1
-									}
-							})
-							.frame(minWidth: 200)
-						}
-					}
+					RecursiveTextField(TextList: $addressList, Placeholder: "https://github.com/Ranoiaetep/AutoRefresher")
 				}
 				Text("x")
 				TextField("0", value: $visitTimes, formatter: NumberFormatter())
@@ -85,14 +69,13 @@ struct ContentView: View {
 						})
 					}
 				}
-				.frame(width: 45)
+				.frame(width: 50)
 			}
 			HStack {
 				Toggle(isOn: $optionMenu) {
 					Label("Advance", systemImage: "gearshape.2.fill")
 				}
 				.toggleStyle(SwitchToggleStyle())
-				Spacer()
 				HStack {
 					if started {
 						ProgressView(value: (visitTimes - remainingTimes) / visitTimes)
@@ -142,29 +125,42 @@ struct ContentView: View {
 				}
 			}
 			if optionMenu {
-				HStack {
-					Spacer()
-					GroupBox() {
-						HStack {
-							Text("Interval:")
-							Stepper(value: $interval, step: 0.2)
-							{
-								TextField("", value: $interval, formatter: doubleFormatter)
-									.frame(width: 40)
-							}
-						}
-						.frame(minWidth: 300, idealWidth: 400, maxWidth: 400)
-					}
-					Spacer()
-				}
+				OptionMenu(interval: interval, doubleFormatter: doubleFormatter)
 			}
 		}
 		.padding()
 	}
 }
 
+struct OptionMenu: View {
+	@State var interval: Double
+	var doubleFormatter: NumberFormatter
+	
+	var body: some View {
+		HStack {
+			Spacer()
+			GroupBox() {
+				HStack {
+					Text("Interval:")
+					Stepper(value: $interval, step: 0.2)
+					{
+						TextField("", value: $interval, formatter: doubleFormatter)
+							.frame(width: 40)
+					}
+				}
+				.frame(minWidth: 300, idealWidth: 400, maxWidth: 400)
+			}
+			Spacer()
+		}
+	}
+}
+
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-		ContentView()
-    }
+	static var previews: some View {
+		Group {
+			ContentView()
+			OptionMenu(interval: 2.5, doubleFormatter: NumberFormatter())
+		}
+		.padding(5)
+	}
 }

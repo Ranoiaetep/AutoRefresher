@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EC31D1125BB8BCC002BAB77 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
 		9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */; };
 		9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E225B799BE006C416A /* ContentView.swift */; };
 		9EEFD1E525B799D4006C416A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveTextField.swift; sourceTree = "<group>"; };
 		9EEFD1DD25B799BE006C416A /* Auto Refersher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refersher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefersherApp.swift; sourceTree = "<group>"; };
 		9EEFD1E225B799BE006C416A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */,
 				9EEFD1E225B799BE006C416A /* ContentView.swift */,
+				9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */,
 				9EEFD1E425B799D4006C416A /* Assets.xcassets */,
 				9EEFD1E925B799D4006C416A /* Info.plist */,
 				9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC31D1125BB8BCC002BAB77 /* RecursiveTextField.swift in Sources */,
 				9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */,
 				9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */,
 			);
