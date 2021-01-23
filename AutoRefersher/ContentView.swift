@@ -47,17 +47,19 @@ struct ContentView: View {
 				Group{
 					if !started || remainingTimes == 0 {
 						Button("Start", action: {
-							firstRun = false
-							started = true
-							remainingTimes = visitTimes
-							if remainingTimes > 0 {
-								for address in addressList{
-									guard let url: URL = URL(string: address) else {
-										continue
+							if !AllEmptyString(addressList) {
+								firstRun = false
+								started = true
+								remainingTimes = visitTimes
+								if remainingTimes > 0 {
+									for address in addressList{
+										guard let url: URL = URL(string: address) else {
+											continue
+										}
+										openURL(url)
 									}
-									openURL(url)
+									remainingTimes -= 1
 								}
-								remainingTimes -= 1
 							}
 						})
 					}
@@ -80,7 +82,7 @@ struct ContentView: View {
 					if started {
 						ProgressView(value: (visitTimes - remainingTimes) / visitTimes)
 							.onReceive(timer, perform: { _ in
-								if remainingTimes > 0 {
+								if remainingTimes > 0 && !AllEmptyString(addressList)  {
 									for address in addressList{
 										guard let url: URL = URL(string: address) else {
 											continue
@@ -99,7 +101,7 @@ struct ContentView: View {
 							else {
 								Label("Job done!", systemImage: "checkmark.circle.fill")
 									.frame(alignment: .center)
-									.foregroundColor(.accentColor)
+									.foregroundColor(.red)
 							}
 						}
 						.frame(width: 150)
@@ -163,4 +165,14 @@ struct ContentView_Previews: PreviewProvider {
 		}
 		.padding(5)
 	}
+}
+
+
+func AllEmptyString(_ stringList: [String]) -> Bool {
+	for string in stringList {
+		if !string.isEmpty {
+			return false
+		}
+	}
+	return true
 }
