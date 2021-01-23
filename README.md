@@ -5,7 +5,5 @@
 # Todos
 - [ ] Proper README
 - [ ] Remove Fullscreen
-- [x] Automatic remove empty links
-- [x] Proper action when no links were there
 - [ ] App icons
 - [ ] Add macOS 10.15 support
