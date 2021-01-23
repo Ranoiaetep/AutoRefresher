@@ -101,7 +101,7 @@ struct ContentView: View {
 							else {
 								Label("Job done!", systemImage: "checkmark.circle.fill")
 									.frame(alignment: .center)
-									.foregroundColor(.red)
+									.foregroundColor(.red	)
 							}
 						}
 						.frame(width: 150)
