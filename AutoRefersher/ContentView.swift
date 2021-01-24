@@ -13,7 +13,7 @@ struct ContentView: View {
 	let doubleFormatter = NumberFormatter()
 	let dateFormatter = DateComponentsFormatter()
 
-	@State private var addressList: [String] = [String()]
+	@State var addressList: [String] = [String()]
 	@State private var visitTimes: Double = 100
 	@State private var remainingTimes: Double = 100
 	@State private var optionMenu: Bool = false
@@ -131,6 +131,14 @@ struct ContentView: View {
 			}
 		}
 		.padding()
+//		.toolbar {
+//			ToolbarItem(placement: .automatic){
+//				Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+//					Image(systemName: "plus")
+//						.font(.largeTitle)
+//				}
+//			}
+//		}
 	}
 }
 
@@ -168,11 +176,25 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-func AllEmptyString(_ stringList: [String]) -> Bool {
+fileprivate func AllEmptyString(_ stringList: [String]) -> Bool {
 	for string in stringList {
 		if !string.isEmpty {
 			return false
 		}
 	}
 	return true
+}
+
+
+fileprivate func NonEmptyCount(_ stringList: [String]) -> Int {
+	var count = 0
+	for string in  stringList {
+		if !string.isEmpty {
+			count += 1
+		}
+	}
+	if !stringList.last!.isEmpty {
+		count -= 1
+	}
+	return count
 }

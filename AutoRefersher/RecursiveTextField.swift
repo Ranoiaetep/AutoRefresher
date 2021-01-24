@@ -18,10 +18,12 @@ struct RecursiveTextField: View {
 		if !skipped {
 			TextField(Placeholder, text: $TextList[Index], onCommit: {
 				if !TextList[Index].isEmpty {
-					TextList.append(String())
+					if !(TextList.last?.isEmpty ?? false) {
+						TextList.append(String())
+					}
 					NextRecursion = AnyView(RecursiveTextField(TextList: $TextList, Index: Index + 1, Placeholder: Placeholder))
 				}
-				else {
+				else if Index != TextList.count - 1 {
 					skipped = true
 				}
 			})

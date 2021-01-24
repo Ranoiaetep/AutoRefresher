@@ -15,6 +15,11 @@ struct AutoRefersherApp: App {
 			ContentView()
 		}
 		.windowStyle(HiddenTitleBarWindowStyle())
-//		.windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: false))
+		.windowToolbarStyle(UnifiedWindowToolbarStyle(showsTitle: true))
 	}
+}
+
+
+func toggleSidebar() {
+	NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
 }
