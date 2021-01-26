@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EC31D1125BB8BCC002BAB77 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
 		9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */; };
 		9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E225B799BE006C416A /* ContentView.swift */; };
 		9EEFD1E525B799D4006C416A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
 		9EEFD1E825B799D4006C416A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */; };
+		DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */; };
+		DE3DA35125BDD8E300DD63D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA35025BDD8E300DD63D3 /* ContentView.swift */; };
+		DE3DA35325BDD8E400DD63D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */; };
+		DE3DA35625BDD8E400DD63D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35525BDD8E400DD63D3 /* Preview Assets.xcassets */; };
+		DE3DA35925BDD8E400DD63D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35725BDD8E400DD63D3 /* Main.storyboard */; };
+		DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
+		DE3DA37625BDD9A300DD63D3 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +29,26 @@
 		9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EEFD1E925B799D4006C416A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoRefersher.entitlements; sourceTree = "<group>"; };
+		DE3DA34C25BDD8E200DD63D3 /* Auto Refresher-10.15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refresher-10.15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE3DA35025BDD8E300DD63D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE3DA35525BDD8E400DD63D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE3DA35825BDD8E400DD63D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE3DA35A25BDD8E400DD63D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3DA35B25BDD8E400DD63D3 /* Auto_Refresher_10_15.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Auto_Refresher_10_15.entitlements; sourceTree = "<group>"; };
+		DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9EEFD1DA25B799BE006C416A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3DA34925BDD8E200DD63D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEFD1DF25B799BE006C416A /* AutoRefersher */,
+				DE3DA34D25BDD8E300DD63D3 /* Auto Refresher-10.15 */,
 				9EEFD1DE25B799BE006C416A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEFD1DD25B799BE006C416A /* Auto Refersher.app */,
+				DE3DA34C25BDD8E200DD63D3 /* Auto Refresher-10.15.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +98,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DE3DA34D25BDD8E300DD63D3 /* Auto Refresher-10.15 */ = {
+			isa = PBXGroup;
+			children = (
+				DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */,
+				DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */,
+				DE3DA35025BDD8E300DD63D3 /* ContentView.swift */,
+				DE3DA35725BDD8E400DD63D3 /* Main.storyboard */,
+				DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */,
+				DE3DA35A25BDD8E400DD63D3 /* Info.plist */,
+				DE3DA35B25BDD8E400DD63D3 /* Auto_Refresher_10_15.entitlements */,
+				DE3DA35425BDD8E400DD63D3 /* Preview Content */,
+			);
+			path = "Auto Refresher-10.15";
+			sourceTree = "<group>";
+		};
+		DE3DA35425BDD8E400DD63D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE3DA35525BDD8E400DD63D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +141,23 @@
 			productReference = 9EEFD1DD25B799BE006C416A /* Auto Refersher.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DE3DA34B25BDD8E200DD63D3 /* Auto Refresher-10.15 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE3DA35C25BDD8E400DD63D3 /* Build configuration list for PBXNativeTarget "Auto Refresher-10.15" */;
+			buildPhases = (
+				DE3DA34825BDD8E200DD63D3 /* Sources */,
+				DE3DA34925BDD8E200DD63D3 /* Frameworks */,
+				DE3DA34A25BDD8E200DD63D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Auto Refresher-10.15";
+			productName = "Auto Refresher-10.15";
+			productReference = DE3DA34C25BDD8E200DD63D3 /* Auto Refresher-10.15.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +168,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					9EEFD1DC25B799BE006C416A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					DE3DA34B25BDD8E200DD63D3 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -122,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				9EEFD1DC25B799BE006C416A /* Auto Refersher */,
+				DE3DA34B25BDD8E200DD63D3 /* Auto Refresher-10.15 */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +204,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE3DA34A25BDD8E200DD63D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3DA35925BDD8E400DD63D3 /* Main.storyboard in Resources */,
+				DE3DA35625BDD8E400DD63D3 /* Preview Assets.xcassets in Resources */,
+				DE3DA35325BDD8E400DD63D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -143,13 +221,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EC31D1125BB8BCC002BAB77 /* RecursiveTextField.swift in Sources */,
+				DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */,
 				9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */,
 				9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE3DA34825BDD8E200DD63D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3DA37625BDD9A300DD63D3 /* RecursiveTextField.swift in Sources */,
+				DE3DA35125BDD8E300DD63D3 /* ContentView.swift in Sources */,
+				DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE3DA35725BDD8E400DD63D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE3DA35825BDD8E400DD63D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9EEFD1EB25B799D4006C416A /* Debug */ = {
@@ -203,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -315,6 +414,54 @@
 			};
 			name = Release;
 		};
+		DE3DA35D25BDD8E400DD63D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Auto Refresher-10.15/Auto_Refresher_10_15.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
+				DEVELOPMENT_TEAM = ML4MC3F798;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DE3DA35E25BDD8E400DD63D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Auto Refresher-10.15/Auto_Refresher_10_15.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
+				DEVELOPMENT_TEAM = ML4MC3F798;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +479,15 @@
 			buildConfigurations = (
 				9EEFD1EE25B799D4006C416A /* Debug */,
 				9EEFD1EF25B799D4006C416A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE3DA35C25BDD8E400DD63D3 /* Build configuration list for PBXNativeTarget "Auto Refresher-10.15" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE3DA35D25BDD8E400DD63D3 /* Debug */,
+				DE3DA35E25BDD8E400DD63D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
