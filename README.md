@@ -6,4 +6,4 @@
 - [ ] Proper README
 - [ ] Remove Fullscreen
 - [ ] App icons
-- [ ] Add macOS 10.15 support
+- [x] Add macOS 10.15 support
