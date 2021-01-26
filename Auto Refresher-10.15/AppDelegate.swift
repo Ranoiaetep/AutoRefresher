@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Auto Refresher-10.15
 //
-//  Created by Peter Cong on 1/24/21.
+//  Created by Ranoiaetep on 1/24/21.
 //
 
 import Cocoa

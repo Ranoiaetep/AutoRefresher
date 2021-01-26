@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  AutoRefersher
 //
-//  Created by Peter Cong on 1/26/21.
+//  Created by Ranoiaetep on 1/26/21.
 //
 
 import SwiftUI
