@@ -6,4 +6,5 @@
 - [ ] Proper README
 - [ ] Remove Fullscreen
 - [ ] App icons
+- [ ] Add "saved list" feature
 - [x] Add macOS 10.15 support
