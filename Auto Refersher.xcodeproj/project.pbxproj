@@ -7,37 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7136DE25C0B275002C8538 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
+		9E7136E625C0B678002C8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7136E325C0B665002C8538 /* ContentView.swift */; };
+		9E7136EB25C0B6D4002C8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7136E325C0B665002C8538 /* ContentView.swift */; };
+		9E7136FD25C0BE81002C8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
 		9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */; };
-		9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E225B799BE006C416A /* ContentView.swift */; };
 		9EEFD1E525B799D4006C416A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
 		9EEFD1E825B799D4006C416A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */; };
 		DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */; };
-		DE3DA35125BDD8E300DD63D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA35025BDD8E300DD63D3 /* ContentView.swift */; };
-		DE3DA35325BDD8E400DD63D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */; };
-		DE3DA35625BDD8E400DD63D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35525BDD8E400DD63D3 /* Preview Assets.xcassets */; };
 		DE3DA35925BDD8E400DD63D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35725BDD8E400DD63D3 /* Main.storyboard */; };
 		DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
-		DE3DA37625BDD9A300DD63D3 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E7136E325C0B665002C8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveTextField.swift; sourceTree = "<group>"; };
 		9EEFD1DD25B799BE006C416A /* Auto Refersher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refersher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefersherApp.swift; sourceTree = "<group>"; };
-		9EEFD1E225B799BE006C416A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EEFD1E425B799D4006C416A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EEFD1E925B799D4006C416A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoRefersher.entitlements; sourceTree = "<group>"; };
 		DE3DA34C25BDD8E200DD63D3 /* Auto Refresher-10.15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refresher-10.15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE3DA35025BDD8E300DD63D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE3DA35525BDD8E400DD63D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE3DA35825BDD8E400DD63D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE3DA35A25BDD8E400DD63D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3DA35B25BDD8E400DD63D3 /* Auto_Refresher_10_15.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Auto_Refresher_10_15.entitlements; sourceTree = "<group>"; };
-		DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +75,11 @@
 		9EEFD1DF25B799BE006C416A /* AutoRefersher */ = {
 			isa = PBXGroup;
 			children = (
-				9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */,
-				9EEFD1E225B799BE006C416A /* ContentView.swift */,
 				9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */,
-				9EEFD1E425B799D4006C416A /* Assets.xcassets */,
+				9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */,
+				9E7136E325C0B665002C8538 /* ContentView.swift */,
 				9EEFD1E925B799D4006C416A /* Info.plist */,
+				9EEFD1E425B799D4006C416A /* Assets.xcassets */,
 				9EEFD1EA25B799D4006C416A /* AutoRefersher.entitlements */,
 				9EEFD1E625B799D4006C416A /* Preview Content */,
 			);
@@ -102,10 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */,
-				DE3DA37525BDD9A300DD63D3 /* RecursiveTextField.swift */,
-				DE3DA35025BDD8E300DD63D3 /* ContentView.swift */,
 				DE3DA35725BDD8E400DD63D3 /* Main.storyboard */,
-				DE3DA35225BDD8E400DD63D3 /* Assets.xcassets */,
 				DE3DA35A25BDD8E400DD63D3 /* Info.plist */,
 				DE3DA35B25BDD8E400DD63D3 /* Auto_Refresher_10_15.entitlements */,
 				DE3DA35425BDD8E400DD63D3 /* Preview Content */,
@@ -209,8 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3DA35925BDD8E400DD63D3 /* Main.storyboard in Resources */,
-				DE3DA35625BDD8E400DD63D3 /* Preview Assets.xcassets in Resources */,
-				DE3DA35325BDD8E400DD63D3 /* Assets.xcassets in Resources */,
+				9E7136FD25C0BE81002C8538 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */,
-				9EEFD1E325B799BE006C416A /* ContentView.swift in Sources */,
+				9E7136E625C0B678002C8538 /* ContentView.swift in Sources */,
 				9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,8 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3DA37625BDD9A300DD63D3 /* RecursiveTextField.swift in Sources */,
-				DE3DA35125BDD8E300DD63D3 /* ContentView.swift in Sources */,
+				9E7136DE25C0B275002C8538 /* RecursiveTextField.swift in Sources */,
+				9E7136EB25C0B6D4002C8538 /* ContentView.swift in Sources */,
 				DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
-				DEVELOPMENT_TEAM = ML4MC3F798;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
@@ -432,6 +424,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -447,7 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
-				DEVELOPMENT_TEAM = ML4MC3F798;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
@@ -456,6 +449,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

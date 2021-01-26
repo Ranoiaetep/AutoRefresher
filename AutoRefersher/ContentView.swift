@@ -2,17 +2,16 @@
 //  ContentView.swift
 //  AutoRefersher
 //
-//  Created by Ranoiaetep on 1/19/21.
+//  Created by Peter Cong on 1/26/21.
 //
 
 import SwiftUI
+import AppKit
 
 struct ContentView: View {
-	@Environment(\.openURL) var openURL
-	
 	let doubleFormatter = NumberFormatter()
 	let dateFormatter = DateComponentsFormatter()
-
+	
 	@State var addressList: [String] = [String()]
 	@State private var visitTimes: Double = 100
 	@State private var remainingTimes: Double = 100
@@ -41,7 +40,9 @@ struct ContentView: View {
 					RecursiveTextField(TextList: $addressList, Placeholder: "https://github.com/Ranoiaetep/AutoRefresher")
 				}
 				Text("x")
-				TextField("0", value: $visitTimes, formatter: NumberFormatter())
+				TextField("0", value: $visitTimes, formatter: NumberFormatter(), onCommit: {
+					remainingTimes = visitTimes
+				})
 					.frame(width: 50)
 				
 				Group{
@@ -56,7 +57,7 @@ struct ContentView: View {
 										guard let url: URL = URL(string: address) else {
 											continue
 										}
-										openURL(url)
+										NSWorkspace.shared.open(url)
 									}
 									remainingTimes -= 1
 								}
@@ -72,26 +73,42 @@ struct ContentView: View {
 					}
 				}
 				.frame(width: 50)
+				.onReceive(timer, perform: {_ in
+					if started {
+						if remainingTimes > 0 && !AllEmptyString(addressList)  {
+							for address in addressList{
+								guard let url: URL = URL(string: address) else {
+									continue
+								}
+								NSWorkspace.shared.open(url)
+							}
+							remainingTimes -= 1
+						}
+					}
+				})
 			}
+			.frame(minWidth: 450)
 			HStack {
 				Toggle(isOn: $optionMenu) {
-					Label("Advance", systemImage: "gearshape.2.fill")
+                    if #available(OSX 11.0, *) {
+                        Label("Advance", systemImage: "gearshape.2.fill")
+                    }
+                    else {
+                        HStack {
+                            Text("􀥏 Advance")
+                        }
+                    }
 				}
 				.toggleStyle(SwitchToggleStyle())
 				HStack {
+                    if #available(OSX 11.0, *) {
+                        ProgressView(value: (visitTimes - remainingTimes) / visitTimes)
+                    }
+                    else {
+                        ProgressBarUI(visitTimes: $visitTimes, remainingTimes: $remainingTimes)
+                            .frame(height: 5)
+                    }
 					if started {
-						ProgressView(value: (visitTimes - remainingTimes) / visitTimes)
-							.onReceive(timer, perform: { _ in
-								if remainingTimes > 0 && !AllEmptyString(addressList)  {
-									for address in addressList{
-										guard let url: URL = URL(string: address) else {
-											continue
-										}
-										openURL(url)
-									}
-									remainingTimes -= 1
-								}
-							})
 						let time = remainingTimes * interval
 						Group {
 							if time > 0 {
@@ -99,7 +116,15 @@ struct ContentView: View {
 									.frame(alignment: .leading)
 							}
 							else {
-								Label("Job done!", systemImage: "checkmark.circle.fill")
+                                Group {
+                                    if #available(OSX 11.0, *) {
+                                        Label("Job done!", systemImage: "checkmark.circle.fill")
+                                    } else {
+                                        HStack {
+                                            Text("􀁣 Job done!")
+                                        }
+                                    }
+                                }
 									.frame(alignment: .center)
 									.foregroundColor(.red	)
 							}
@@ -107,12 +132,6 @@ struct ContentView: View {
 						.frame(width: 150)
 					}
 					else {
-						if remainingTimes == visitTimes {
-							ProgressView(value: 0.0)
-						}
-						else {
-							ProgressView(value: (visitTimes - remainingTimes) / visitTimes)
-						}
 						Group{
 							if remainingTimes > 0 && !firstRun {
 								Text(String(format: "%.0f x remaining", remainingTimes))
@@ -127,23 +146,15 @@ struct ContentView: View {
 				}
 			}
 			if optionMenu {
-				OptionMenu(interval: interval, doubleFormatter: doubleFormatter)
+				OptionMenu(interval: $interval, doubleFormatter: doubleFormatter)
 			}
 		}
 		.padding()
-//		.toolbar {
-//			ToolbarItem(placement: .automatic){
-//				Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-//					Image(systemName: "plus")
-//						.font(.largeTitle)
-//				}
-//			}
-//		}
 	}
 }
 
 struct OptionMenu: View {
-	@State var interval: Double
+	@Binding var interval: Double
 	var doubleFormatter: NumberFormatter
 	
 	var body: some View {
@@ -165,11 +176,12 @@ struct OptionMenu: View {
 	}
 }
 
+@available(OSX 11.0, *)
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
 			ContentView()
-			OptionMenu(interval: 2.5, doubleFormatter: NumberFormatter())
+			OptionMenu(interval: .constant(2.5), doubleFormatter: NumberFormatter())
 		}
 		.padding(5)
 	}
@@ -197,4 +209,23 @@ fileprivate func NonEmptyCount(_ stringList: [String]) -> Int {
 		count -= 1
 	}
 	return count
+}
+
+struct ProgressBarUI: View {
+	@Binding var visitTimes: Double
+	@Binding var remainingTimes: Double
+
+	var body: some View {
+		GeometryReader { geometry in
+			ZStack(alignment: .leading) {
+				RoundedRectangle(cornerRadius: 45.0).frame(width: geometry.size.width , height: geometry.size.height)
+					.opacity(0.3)
+					.foregroundColor(Color(NSColor.systemGray))
+					.border(Color.gray.opacity(0.1), width: 1.0)
+				RoundedRectangle(cornerRadius: 45.0).frame(width: min(CGFloat((self.visitTimes - self.remainingTimes) / self.visitTimes + 0.02) * geometry.size.width, geometry.size.width), height: geometry.size.height)
+				.foregroundColor(Color(NSColor.systemBlue))
+				.animation(.easeInOut)
+			}
+		}
+	}
 }
