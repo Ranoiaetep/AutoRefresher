@@ -7,11 +7,16 @@
 
 import SwiftUI
 import AppKit
+import UserNotifications
 
 struct ContentView: View {
 	let doubleFormatter = NumberFormatter()
 	let dateFormatter = DateComponentsFormatter()
 	
+	let center = UNUserNotificationCenter.current()
+	let notification = UNMutableNotificationContent()
+	let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.3, repeats: false)
+
 	@State var addressList: [String] = [String()]
 	@State private var visitTimes: Double = 100
 	@State private var remainingTimes: Double = 100
@@ -19,8 +24,25 @@ struct ContentView: View {
 	@State private var interval: Double = 1.8
 	@State private var started: Bool = false
 	@State private var firstRun: Bool = true
+	@State private var notificationOn: Bool = true
 	
 	init() {
+		center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { _,_ in}
+		
+		center.getNotificationSettings { settings in
+			guard (settings.authorizationStatus == .authorized) ||
+				  (settings.authorizationStatus == .provisional) else { return }
+
+			if settings.alertSetting == .enabled {
+				// Schedule an alert-only notification.
+			} else {
+				// Schedule a notification with a badge and sound.
+			}
+		}
+			
+//		notification.title = "Auto Refresher"
+		notification.body = "􀁣 Job done!"
+		
 		self.started = started
 		doubleFormatter.usesSignificantDigits = true
 		doubleFormatter.maximumFractionDigits = 2
@@ -83,6 +105,10 @@ struct ContentView: View {
 								NSWorkspace.shared.open(url)
 							}
 							remainingTimes -= 1
+							if remainingTimes == 0 && notificationOn {
+								let request = UNNotificationRequest(identifier: "request", content: notification, trigger: trigger)
+								center.add(request) { _ in}
+							}
 						}
 					}
 				})
@@ -146,7 +172,7 @@ struct ContentView: View {
 				}
 			}
 			if optionMenu {
-				OptionMenu(interval: $interval, doubleFormatter: doubleFormatter)
+				OptionMenu(interval: $interval, notification: $notificationOn, doubleFormatter: doubleFormatter)
 			}
 		}
 		.padding()
@@ -155,6 +181,7 @@ struct ContentView: View {
 
 struct OptionMenu: View {
 	@Binding var interval: Double
+	@Binding var notification: Bool
 	var doubleFormatter: NumberFormatter
 	
 	var body: some View {
@@ -162,12 +189,19 @@ struct OptionMenu: View {
 			Spacer()
 			GroupBox() {
 				HStack {
+					Spacer()
 					Text("Interval:")
 					Stepper(value: $interval, step: 0.2)
 					{
 						TextField("", value: $interval, formatter: doubleFormatter)
 							.frame(width: 40)
 					}
+					Spacer()
+					Toggle(isOn: $notification) {
+						Text("Notification:")
+					}
+					.toggleStyle(SwitchToggleStyle())
+					Spacer()
 				}
 				.frame(minWidth: 300, idealWidth: 400, maxWidth: 400)
 			}
@@ -181,7 +215,7 @@ struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
 			ContentView()
-			OptionMenu(interval: .constant(2.5), doubleFormatter: NumberFormatter())
+			OptionMenu(interval: .constant(2.5), notification: .constant(true), doubleFormatter: NumberFormatter())
 		}
 		.padding(5)
 	}
