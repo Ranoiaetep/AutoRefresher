@@ -12,7 +12,7 @@ import UserNotifications
 struct ContentView: View {
 	let doubleFormatter = NumberFormatter()
 	let dateFormatter = DateComponentsFormatter()
-	
+
 	let center = UNUserNotificationCenter.current()
 	let notification = UNMutableNotificationContent()
 	let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.3, repeats: false)
@@ -27,7 +27,7 @@ struct ContentView: View {
 	@State private var notificationOn: Bool = true
 	
 	init() {
-		center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { _,_ in}
+		center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { _, _ in}
 		
 		center.getNotificationSettings { settings in
 			guard (settings.authorizationStatus == .authorized) ||
@@ -56,10 +56,10 @@ struct ContentView: View {
 	
 	var body: some View {
 		let timer = Timer.publish(every: interval, on: .main, in: .common).autoconnect()
-		VStack{
+		VStack {
 			HStack {
 				VStack {
-					RecursiveTextField(TextList: $addressList, Placeholder: "https://github.com/Ranoiaetep/AutoRefresher")
+					RecursiveTextField(textList: $addressList, placeholder: "https://github.com/Ranoiaetep/AutoRefresher")
 				}
 				Text("x")
 				TextField("0", value: $visitTimes, formatter: NumberFormatter(), onCommit: {
@@ -67,15 +67,15 @@ struct ContentView: View {
 				})
 					.frame(width: 50)
 				
-				Group{
+				Group {
 					if !started || remainingTimes == 0 {
 						Button("Start", action: {
-							if !AllEmptyString(addressList) {
+							if !isAllEmptyString(addressList) {
 								firstRun = false
 								started = true
 								remainingTimes = visitTimes
 								if remainingTimes > 0 {
-									for address in addressList{
+									for address in addressList {
 										guard let url: URL = URL(string: address) else {
 											continue
 										}
@@ -85,8 +85,7 @@ struct ContentView: View {
 								}
 							}
 						})
-					}
-					else {
+					} else {
 						Button(action: {
 							started = false
 						}, label: {
@@ -97,7 +96,7 @@ struct ContentView: View {
 				.frame(width: 50)
 				.onReceive(timer, perform: {_ in
 					if started {
-						if remainingTimes > 0 && !AllEmptyString(addressList)  {
+						if remainingTimes > 0 && !isAllEmptyString(addressList) {
 							for address in addressList{
 								guard let url: URL = URL(string: address) else {
 									continue
@@ -187,12 +186,11 @@ struct OptionMenu: View {
 	var body: some View {
 		HStack {
 			Spacer()
-			GroupBox() {
+			GroupBox {
 				HStack {
 					Spacer()
 					Text("Interval:")
-					Stepper(value: $interval, step: 0.2)
-					{
+					Stepper(value: $interval, step: 0.2) {
 						TextField("", value: $interval, formatter: doubleFormatter)
 							.frame(width: 40)
 					}
@@ -222,17 +220,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-fileprivate func AllEmptyString(_ stringList: [String]) -> Bool {
-	for string in stringList {
-		if !string.isEmpty {
-			return false
-		}
+private func isAllEmptyString(_ stringList: [String]) -> Bool {
+    for string in stringList where !string.isEmpty {
+        return false
 	}
 	return true
 }
 
-
-fileprivate func NonEmptyCount(_ stringList: [String]) -> Int {
+private func nonEmptyCount(_ stringList: [String]) -> Int {
 	var count = 0
 	for string in  stringList {
 		if !string.isEmpty {
@@ -252,11 +247,18 @@ struct ProgressBarUI: View {
 	var body: some View {
 		GeometryReader { geometry in
 			ZStack(alignment: .leading) {
-				RoundedRectangle(cornerRadius: 45.0).frame(width: geometry.size.width , height: geometry.size.height)
+				RoundedRectangle(cornerRadius: 45.0)
+                    .frame(width: geometry.size.width,
+                           height: geometry.size.height)
 					.opacity(0.3)
 					.foregroundColor(Color(NSColor.systemGray))
 					.border(Color.gray.opacity(0.1), width: 1.0)
-				RoundedRectangle(cornerRadius: 45.0).frame(width: min(CGFloat((self.visitTimes - self.remainingTimes) / self.visitTimes + 0.02) * geometry.size.width, geometry.size.width), height: geometry.size.height)
+				RoundedRectangle(cornerRadius: 45.0)
+                    .frame(
+                        width: min(
+                            CGFloat((self.visitTimes - self.remainingTimes) / self.visitTimes + 0.02) * geometry.size.width,
+                            geometry.size.width),
+                        height: geometry.size.height)
 				.foregroundColor(Color(NSColor.systemBlue))
 				.animation(.easeInOut)
 			}
