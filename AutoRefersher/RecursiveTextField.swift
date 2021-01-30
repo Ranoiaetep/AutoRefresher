@@ -22,8 +22,7 @@ struct RecursiveTextField: View {
 						textList.append(String())
 					}
 					nextRecursion = AnyView(RecursiveTextField(textList: $textList, index: index + 1, placeholder: placeholder))
-				}
-				else if index != textList.count - 1 {
+				} else if index != textList.count - 1 {
 					skipped = true
 				}
 			})
@@ -43,7 +42,7 @@ struct RecursiveTextFieldPreviewContainer: View {
 }
 
 struct RecursiveTextField_Previews: PreviewProvider {
-	
+
 	static var previews: some View {
 		RecursiveTextFieldPreviewContainer()
 			.padding()

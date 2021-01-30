@@ -25,7 +25,7 @@ struct ContentView: View {
 	@State private var started: Bool = false
 	@State private var firstRun: Bool = true
 	@State private var notificationOn: Bool = true
-	
+
 	init() {
 		center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { _, _ in}
 		
@@ -97,7 +97,7 @@ struct ContentView: View {
 				.onReceive(timer, perform: {_ in
 					if started {
 						if remainingTimes > 0 && !isAllEmptyString(addressList) {
-							for address in addressList{
+							for address in addressList {
 								guard let url: URL = URL(string: address) else {
 									continue
 								}
@@ -117,8 +117,7 @@ struct ContentView: View {
 				Toggle(isOn: $optionMenu) {
                     if #available(OSX 11.0, *) {
                         Label("Advance", systemImage: "gearshape.2.fill")
-                    }
-                    else {
+                    } else {
                         HStack {
                             Text("􀥏 Advance")
                         }
@@ -157,7 +156,7 @@ struct ContentView: View {
 						.frame(width: 150)
 					}
 					else {
-						Group{
+						Group {
 							if remainingTimes > 0 && !firstRun {
 								Text(String(format: "%.0f x remaining", remainingTimes))
 									.frame(alignment: .center)
@@ -219,7 +218,6 @@ struct ContentView_Previews: PreviewProvider {
 	}
 }
 
-
 private func isAllEmptyString(_ stringList: [String]) -> Bool {
     for string in stringList where !string.isEmpty {
         return false
@@ -229,10 +227,8 @@ private func isAllEmptyString(_ stringList: [String]) -> Bool {
 
 private func nonEmptyCount(_ stringList: [String]) -> Int {
 	var count = 0
-	for string in  stringList {
-		if !string.isEmpty {
-			count += 1
-		}
+	for string in  stringList where !string.isEmpty {
+        count += 1
 	}
 	if !stringList.last!.isEmpty {
 		count -= 1
@@ -256,7 +252,8 @@ struct ProgressBarUI: View {
 				RoundedRectangle(cornerRadius: 45.0)
                     .frame(
                         width: min(
-                            CGFloat((self.visitTimes - self.remainingTimes) / self.visitTimes + 0.02) * geometry.size.width,
+                            CGFloat((self.visitTimes - self.remainingTimes)
+								/ self.visitTimes + 0.02) * geometry.size.width,
                             geometry.size.width),
                         height: geometry.size.height)
 				.foregroundColor(Color(NSColor.systemBlue))
