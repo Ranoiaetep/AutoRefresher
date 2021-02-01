@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E7136DE25C0B275002C8538 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
 		9E7136E625C0B678002C8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7136E325C0B665002C8538 /* ContentView.swift */; };
 		9E7136EB25C0B6D4002C8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7136E325C0B665002C8538 /* ContentView.swift */; };
 		9E7136FD25C0BE81002C8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E425B799D4006C416A /* Assets.xcassets */; };
@@ -16,12 +15,11 @@
 		9EEFD1E825B799D4006C416A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEFD1E725B799D4006C416A /* Preview Assets.xcassets */; };
 		DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */; };
 		DE3DA35925BDD8E400DD63D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3DA35725BDD8E400DD63D3 /* Main.storyboard */; };
-		DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */; };
+		DED91D1625C8083C0027A0FD /* RecursiveTextField in Frameworks */ = {isa = PBXBuildFile; productRef = DED91D1525C8083C0027A0FD /* RecursiveTextField */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E7136E325C0B665002C8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveTextField.swift; sourceTree = "<group>"; };
 		9EEFD1DD25B799BE006C416A /* Auto Refersher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Refersher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRefersherApp.swift; sourceTree = "<group>"; };
 		9EEFD1E425B799D4006C416A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED91D1625C8083C0027A0FD /* RecursiveTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +74,6 @@
 		9EEFD1DF25B799BE006C416A /* AutoRefersher */ = {
 			isa = PBXGroup;
 			children = (
-				9EC31D1025BB8BCC002BAB77 /* RecursiveTextField.swift */,
 				9EEFD1E025B799BE006C416A /* AutoRefersherApp.swift */,
 				9E7136E325C0B665002C8538 /* ContentView.swift */,
 				9EEFD1E925B799D4006C416A /* Info.plist */,
@@ -130,6 +128,9 @@
 			dependencies = (
 			);
 			name = "Auto Refersher";
+			packageProductDependencies = (
+				DED91D1525C8083C0027A0FD /* RecursiveTextField */,
+			);
 			productName = AutoRefersher;
 			productReference = 9EEFD1DD25B799BE006C416A /* Auto Refersher.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 9EEFD1D425B799BD006C416A;
+			packageReferences = (
+				DED91D1425C8083C0027A0FD /* XCRemoteSwiftPackageReference "RecursiveTextField" */,
+			);
 			productRefGroup = 9EEFD1DE25B799BE006C416A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3DA36C25BDD94C00DD63D3 /* RecursiveTextField.swift in Sources */,
 				9E7136E625C0B678002C8538 /* ContentView.swift in Sources */,
 				9EEFD1E125B799BE006C416A /* AutoRefersherApp.swift in Sources */,
 			);
@@ -223,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E7136DE25C0B275002C8538 /* RecursiveTextField.swift in Sources */,
 				9E7136EB25C0B6D4002C8538 /* ContentView.swift in Sources */,
 				DE3DA34F25BDD8E300DD63D3 /* AppDelegate.swift in Sources */,
 			);
@@ -491,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DED91D1425C8083C0027A0FD /* XCRemoteSwiftPackageReference "RecursiveTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ranoiaetep/RecursiveTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DED91D1525C8083C0027A0FD /* RecursiveTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DED91D1425C8083C0027A0FD /* XCRemoteSwiftPackageReference "RecursiveTextField" */;
+			productName = RecursiveTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9EEFD1D525B799BD006C416A /* Project object */;
 }

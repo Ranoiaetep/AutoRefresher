@@ -8,6 +8,7 @@
 import SwiftUI
 import AppKit
 import UserNotifications
+import RecursiveTextField
 
 struct ContentView: View {
 	let doubleFormatter = NumberFormatter()
