@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				9EEFD1DF25B799BE006C416A /* AutoRefresher */,
-				DE3DA34D25BDD8E300DD63D3 /* Auto Refresher-10.15 */,
+				DE3DA34D25BDD8E300DD63D3 /* AutoRefresher-10.15 */,
 				9EEFD1DE25B799BE006C416A /* Products */,
 				DE3D892025CD208100C8C916 /* Frameworks */,
 			);
@@ -102,7 +102,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DE3DA34D25BDD8E300DD63D3 /* Auto Refresher-10.15 */ = {
+		DE3DA34D25BDD8E300DD63D3 /* AutoRefresher-10.15 */ = {
 			isa = PBXGroup;
 			children = (
 				DE3DA34E25BDD8E300DD63D3 /* AppDelegate.swift */,
@@ -111,7 +111,7 @@
 				DE3DA35B25BDD8E400DD63D3 /* Auto_Refresher_10_15.entitlements */,
 				DE3DA35425BDD8E400DD63D3 /* Preview Content */,
 			);
-			path = "Auto Refresher-10.15";
+			path = "AutoRefresher-10.15";
 			sourceTree = "<group>";
 		};
 		DE3DA35425BDD8E400DD63D3 /* Preview Content */ = {
@@ -428,22 +428,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Auto Refresher-10.15/Auto_Refresher_10_15.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "AutoRefresher-10.15/Auto_Refresher_10_15.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AutoRefresher-10.15/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
+				INFOPLIST_FILE = "AutoRefresher-10.15/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.9.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ranoiaetep.Auto-Refresher-10-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -454,22 +454,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Auto Refresher-10.15/Auto_Refresher_10_15.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "AutoRefresher-10.15/Auto_Refresher_10_15.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Auto Refresher-10.15/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AutoRefresher-10.15/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Auto Refresher-10.15/Info.plist";
+				INFOPLIST_FILE = "AutoRefresher-10.15/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.9.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "Peter.Auto-Refresher-10-15";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ranoiaetep.Auto-Refresher-10-15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
