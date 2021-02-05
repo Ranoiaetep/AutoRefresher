@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RecursiveTextField",
+        "repositoryURL": "https://github.com/Ranoiaetep/RecursiveTextField.git",
+        "state": {
+          "branch": null,
+          "revision": "b10ac470c18b62a439c9ca02bddf6a68e2372eb9",
+          "version": "0.9.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
