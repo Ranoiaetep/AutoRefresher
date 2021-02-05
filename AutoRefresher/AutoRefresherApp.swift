@@ -1,6 +1,6 @@
 //
-//  AutoRefersherApp.swift
-//  AutoRefersher
+//  AutoRefresherApp.swift
+//  AutoRefresher
 //
 //  Created by Ranoiaetep on 1/19/21.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct AutoRefersherApp: App {
+struct AutoRefresherApp: App {
 	@State var sidebar: Bool = true
     var body: some Scene {
         WindowGroup {

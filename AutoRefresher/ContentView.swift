@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  AutoRefersher
+//  AutoRefresher
 //
 //  Created by Ranoiaetep on 1/26/21.
 //
